@@ -16,5 +16,15 @@
 	}
 
 
-
+	function preloadVideos(){
+		console.log("preloadVideos");
+		TenvideoJSBridge.invoke('preloadVideos', {"videos":[{"vid":"dddd","definition":"hd"},{"vid":"aaaa","definition":"shd"}]}, function(ret){
+			alert(ret);
+			document.getElementById("apiResult").value = ret;
+			//var jret = JSON.parse(ret);
+			//alert(JSON.stringify(jret.errCode));
+			//alert(ret.errMsg);
+			//alert(ret.errCode + ": " + ret.errMsg + ": " + JSON.stringify(ret.result));
+		});
+	}
 
